@@ -1,4 +1,4 @@
-FROM python:3.10-bookworm
+FROM nvcr.io/nvidia/pytorch:24.12-py3
 
 WORKDIR /webui
 
@@ -16,4 +16,4 @@ USER 1000:1000
 
 RUN ./webui.sh --exit --skip-torch-cuda-test
 
-CMD [ "./webui.sh", "--skip-prepare-environment", "--listen" ]
+CMD [ "./webui.sh", "--skip-prepare-environment"]
